@@ -1,0 +1,103 @@
+
+<!--
+<mat-toolbar color="primary">
+    <p>Project layer</p> 
+</mat-toolbar>
+-->
+
+<!--
+<mat-form-field class="search-field">
+    
+    <mat-label>Input Project code</mat-label>
+    <input matInput type="text" [(ngModel)]="value">
+    <button mat-button color="primary" [routerLink]="['/prj', value, 'approach']">Search</button>
+</mat-form-field>
+-->
+
+
+<h3>Navigation</h3>
+<mat-accordion>
+    
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+              Actions
+          </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list>
+
+                  
+                  <mat-list-item>Properties</mat-list-item>
+                  <mat-list-item>Snapshots</mat-list-item>
+                  <mat-list-item>Export</mat-list-item>
+                  <mat-list-item>Delete</mat-list-item>
+  
+          </mat-list>
+      </mat-expansion-panel>
+    
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Governance
+        </mat-panel-title>
+        </mat-expansion-panel-header>
+            <mat-list>
+                
+                <mat-list-item>
+                    <button mat-button>Mandate</button>
+                </mat-list-item>
+                
+                <mat-list-item>
+                    <button mat-button>Business Case</button>
+                </mat-list-item>
+
+                <mat-list-item>
+                    <button mat-button [routerLink]="['/prj', 'PRJ1', 'a', 'approach']">Approaches</button>
+                </mat-list-item>
+
+                <mat-list-item>
+                    <button mat-button [routerLink]="['/prj', 'PRJ1', 'a', 'org']">Organization</button>
+                </mat-list-item>
+
+            </mat-list>
+        </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Baselines
+        </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+                <mat-list-item>
+                    <button mat-button [routerLink]="['/prj', 'PRJ1', 'a', 'prd']">Products</button>
+                </mat-list-item>
+                <mat-list-item>Quality</mat-list-item>
+                <mat-list-item>Benefits</mat-list-item>
+                <mat-list-item>Timeline</mat-list-item>
+                <mat-list-item>Cost</mat-list-item>
+                <mat-list-item>Risks</mat-list-item>
+
+        </mat-list>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Activities
+        </mat-panel-title>
+        </mat-expansion-panel-header>
+            <mat-list>
+                <mat-list-item>Scope</mat-list-item>
+                <mat-list-item>Quality</mat-list-item>
+                <mat-list-item>Benefits</mat-list-item>
+                <mat-list-item>Timeline</mat-list-item>
+                <mat-list-item>Cost</mat-list-item>
+                <mat-list-item>Risks</mat-list-item>
+
+            </mat-list>
+        </mat-expansion-panel>
+</mat-accordion>
+
+
+

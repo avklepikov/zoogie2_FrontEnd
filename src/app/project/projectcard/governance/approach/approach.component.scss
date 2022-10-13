@@ -1,0 +1,22 @@
+.approach-card {
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    align-items: stretch
+    //max-height: 150px;
+    //background-color:rgb(252, 229, 229) 
+}
+
+.approach-card-content {
+    max-height: 200px;
+    overflow: auto;
+    white-space: pre-wrap;
+}
+
+.approach-edit {
+    color: gray
+}
+
+.approach-flex-container {
+    flex-wrap: wrap;
+    
+}

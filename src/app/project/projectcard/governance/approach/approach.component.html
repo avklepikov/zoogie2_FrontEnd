@@ -1,0 +1,166 @@
+<div *ngIf="project">
+<mat-toolbar color="secondary" class="mat-typography">
+    <p>{{ currentProject }}</p>
+    <p> : </p>
+    <p>{{project[0].version.title}}</p>
+    <span class="flex-spacer"></span>
+    <p>Project layer - Project - Governance Approach</p> 
+</mat-toolbar>
+
+
+<div class="container mat-typography">
+    
+    <div fxLayout="column" fxLayout.gt-sm="row">
+        <div fxFlex="15">
+            <app-sidepanel></app-sidepanel>
+        </div>
+
+        <div fxFlex="85">
+            
+            <mat-tab-group mat-align-tabs="start">
+                <mat-tab label="Project">
+
+                    <div class="container" class="approach-flex-container" fxLayout="column" fxLayout.gt-sm="row">
+
+                        <div fxFlex="33" *ngFor="let approach of project[0].version.governance.approaches.projectApproach">
+                            <mat-card fxFlex class="approach-card">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        {{approach.title}}
+                                    </mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content class="approach-card-content">
+                                    <p>{{ approach.details | nl2br }} </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button class="approach-edit" mat-button>...</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>   
+                    
+                    </div>
+                    
+                    
+                </mat-tab>
+
+                
+
+                <mat-tab label="Quality">
+
+                    <div class="container" class="approach-flex-container" fxLayout="column" fxLayout.gt-sm="row">
+
+                        <div fxFlex="33" *ngFor="let approach of project[0].version.governance.approaches.qualityApproach">
+                            <mat-card fxFlex class="approach-card">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        {{approach.title}}
+                                    </mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content class="approach-card-content">
+                                    <p>{{ approach.details | nl2br }} </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button class="approach-edit" mat-button>...</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>   
+                    
+                    </div>
+                    
+
+
+                </mat-tab>
+
+
+
+                <mat-tab label="Risk">
+
+                    <div class="container" class="approach-flex-container" fxLayout="column" fxLayout.gt-sm="row">
+
+                        <div fxFlex="33" *ngFor="let approach of this.project[0].version.governance.approaches.riskApproach">
+                            <mat-card fxFlex class="approach-card">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        {{approach.title}}
+                                    </mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content class="approach-card-content">
+                                    <p>{{ approach.details | nl2br }} </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button class="approach-edit" mat-button>...</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>   
+                    
+                    </div>
+                
+
+                </mat-tab>
+
+
+                
+                <mat-tab label="Change">
+
+                    <div class="container" class="approach-flex-container" fxLayout="column" fxLayout.gt-sm="row">
+
+                        <div fxFlex="33" *ngFor="let approach of this.project[0].version.governance.approaches.changeApproach">
+                            <mat-card fxFlex class="approach-card">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        {{approach.title}}
+                                    </mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content class="approach-card-content">
+                                    <p>{{ approach.details | nl2br }} </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button class="approach-edit" mat-button>...</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>   
+                    
+                    </div>
+
+                </mat-tab>
+
+
+
+
+                <mat-tab label="Communication">
+
+                    <div class="container" class="approach-flex-container" fxLayout="column" fxLayout.gt-sm="row">
+
+                        <div fxFlex="33" *ngFor="let approach of this.project[0].version.governance.approaches.communicationApproach">
+                            <mat-card fxFlex class="approach-card">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        {{approach.title}}
+                                    </mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content class="approach-card-content">
+                                    <p>{{ approach.details | nl2br }} </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button class="approach-edit" mat-button>...</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>   
+                    
+                    </div>
+
+                </mat-tab>
+
+                
+
+            </mat-tab-group>
+            
+        </div>    
+            
+
+    </div>
+
+
+</div>    
+
+</div>

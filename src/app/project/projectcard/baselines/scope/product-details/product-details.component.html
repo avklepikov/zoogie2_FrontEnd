@@ -1,0 +1,25 @@
+<div class="mat-typography">
+<mat-dialog-content class="product-details"> <!--mat-typography-->
+
+    
+    <h2> Product name: {{ data.title }} </h2>
+    <h3> Product ID: {{data.id}} ;  Parent ID {{ data.parentId }} </h3>
+    <h3> Category: {{data.category}}</h3>
+    <h3> Status: {{data.status}}</h3>
+
+    <div *ngFor="let chapter of data.chapters">
+        <mat-divider></mat-divider>
+        <p></p>
+        <h2>{{chapter.title}}</h2>
+        <p>{{chapter.details | nl2br}}</p>
+        <p></p>
+
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-button color="primary" (click)="onRowClicked()">Edit</button>
+</mat-dialog-actions>
+
+</div>
